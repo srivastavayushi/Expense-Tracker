@@ -1,24 +1,23 @@
-import './App.css';
+import "./App.css";
+import { GlobalProvider } from "./context/GlobalState";
 
 // Import Components
 import Balance from "./components/Balance";
 import Expenditure from "./components/Expenditure";
-import History from "./components/History";
+import Transactions from "./components/Transactions";
 import AddTransaction from "./components/AddTransaction";
 
 function App() {
   return (
-    <div >
+    <GlobalProvider>
       <h2>Expense Tracker</h2>
       <div className="container">
-      <Balance/>
-      <Expenditure/>
-      <History/>
-      <AddTransaction/>
+        <Balance />
+        <Expenditure />
+        <Transactions />
+        <AddTransaction />
       </div>
-     
-    
-    </div>
+    </GlobalProvider>
   );
 }
 
